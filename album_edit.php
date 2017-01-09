@@ -101,18 +101,17 @@ $aname=$row['aname'];
       <div class="form-row">
         <label ><span>โปรดเลือกวันที่ข่าวสาร</span>
            <?php
-					$sql="select * from album_pic where aid='$id'";						  
-							$result =$db->query($sql);
-					  		while($row = $result->fetch_array()){
-					?>
-						<li><input type="file" name="imageupload[]" ><br>รูปเดิม <img src = "upload/<?php echo $row['ppic'];?>" width="200"><br>                     
-                     <?php } ?>
+	         $sql="select * from album_pic where aid='$id'";						  
+		 $result =$db->query($sql);
+		 	while($row = $result->fetch_array()){?>
+	<li><input type="file" name="imageupload[]" ><br>รูปเดิม <img src = "upload/<?php echo $row['ppic'];?>" width="200"><br>                     
+           <?php } ?>
           </label>
           
       </div>
       <div class="form-row">
         <input type="hidden" name="id" value="<?php echo $id ?>">
-        <button type="submit" name="submit" value="submit">บันทึก</button>
+        <button type="submit" name="submit" value="submit">บันทึก</button><br><br>
       </div>
     </form>
   </div>
