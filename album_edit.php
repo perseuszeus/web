@@ -11,8 +11,8 @@ if(filter_input(INPUT_POST,'submit')){
 
 	for($i=0;$i<count($_FILES['imageupload']['name']);$i++)
 	{
-	$pic = "ppic".$i;
-	$ppic = (filter_input(INPUT_POST,$pic));
+	$pic1 = "ppic".$i;
+	$ppic = (filter_input(INPUT_POST,$pic1));
 	$imageupload = isset($_FILES['imageupload']['tmp_name'][$i])?$_FILES['imageupload']['tmp_name'][$i]: "";
 	$imageupload_name = isset($_FILES['imageupload']['name'][$i])?$_FILES['imageupload']['name'][$i] : "";
 
@@ -93,13 +93,13 @@ $aname=$row['aname'];
 ?>
 
  <div class="form-row">
-        <label ><span>โปรดเลือกวันที่ข่าวสาร</span>
+        <label ><span>รูปหลัก</span>
           <input type="file" name="imageupload[]" >รูปเดิม <img src = "upload/<?php echo $pic?>" width="200">
           </label>
           
       </div>
       <div class="form-row">
-        <label ><span>โปรดเลือกวันที่ข่าวสาร</span>
+        <label ><span>รูปย่อย</span>
            <?php
 	         $sql="select * from album_pic where aid='$id'";						  
 		 $result =$db->query($sql);
