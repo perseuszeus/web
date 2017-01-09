@@ -111,7 +111,7 @@ $aname=$row['aname'];
       </div>
       <div class="form-row">
         <input type="hidden" name="id" value="<?php echo $id ?>">
-        <button type="submit" name="submit" value="submit">บันทึก</button><br>
+        <button type="submit" name="submit" value="submit">บันทึก</button>
       </div>
     </form>
   </div>
